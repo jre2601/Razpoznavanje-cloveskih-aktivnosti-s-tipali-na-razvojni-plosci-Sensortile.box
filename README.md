@@ -1,0 +1,1 @@
+# Razpoznavanje-cloveskih-aktivnosti-s-tipali-na-razvojni-plosci-Sensortile.box
