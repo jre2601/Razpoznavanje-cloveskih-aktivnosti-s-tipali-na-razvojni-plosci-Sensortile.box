@@ -1,1 +1,1 @@
-# Razpoznavanje-cloveskih-aktivnosti-s-tipali-na-razvojni-plosci-Sensortile.box
+# Razpoznavanje človeskih aktivnosti s tipali na razvojni plošči Sensortile.box

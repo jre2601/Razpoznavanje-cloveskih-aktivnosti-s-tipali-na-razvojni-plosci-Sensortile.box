@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2017  STMicroelectronics – All rights reserved
+  ~ The STMicroelectronics corporate logo is a trademark of STMicroelectronics
+  ~
+  ~ Redistribution and use in source and binary forms, with or without modification,
+  ~ are permitted provided that the following conditions are met:
+  ~
+  ~ - Redistributions of source code must retain the above copyright notice, this list of conditions
+  ~   and the following disclaimer.
+  ~
+  ~ - Redistributions in binary form must reproduce the above copyright notice, this list of
+  ~   conditions and the following disclaimer in the documentation and/or other materials provided
+  ~   with the distribution.
+  ~
+  ~ - Neither the name nor trademarks of STMicroelectronics International N.V. nor any other
+  ~   STMicroelectronics company nor the names of its contributors may be used to endorse or
+  ~   promote products derived from this software without specific prior written permission.
+  ~
+  ~ - All of the icons, pictures, logos and other images that are provided with the source code
+  ~   in a directory whose title begins with st_images may only be used for internal purposes and
+  ~   shall not be redistributed to any third party or modified in any way.
+  ~
+  ~ - Any redistributions in binary form shall not include the capability to display any of the
+  ~   icons, pictures, logos and other images that are provided with the source code in a directory
+  ~   whose title begins with st_images.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR
+  ~ IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+  ~ AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER
+  ~ OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  ~ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  ~ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  ~ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  ~ OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+  ~ OF SUCH DAMAGE.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.st.BlueMS.demos.LabelingSensorsFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/status_batteryCard"
+        android:layout_width="294dp"
+        android:layout_height="78dp"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="82dp">
+
+            <ImageView
+                android:id="@+id/status_batteryImage"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/battery_missing" />
+
+            <TextView
+                android:id="@+id/status_batteryPercentageText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/status_batteryImage"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Charge: 12%" />
+
+            <TextView
+                android:id="@+id/status_batteryStatusText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/status_batteryPercentageText"
+                app:layout_constraintStart_toStartOf="@+id/status_batteryPercentageText"
+                app:layout_constraintTop_toBottomOf="@+id/status_batteryPercentageText"
+                tools:text="Status Charging" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.145" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.27" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.395" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.52" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.645" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.77" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.89" />
+
+    <ToggleButton
+        android:id="@+id/walkingLabelButton"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:text="WALKING"
+        android:textOff="WALKING OFF"
+        android:textOn="WALKING ON"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal1" />
+
+    <ToggleButton
+        android:id="@+id/fallLabelButton"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:text="FALL"
+        android:textOff="FALL"
+        android:textOn="FALL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal7" />
+
+    <ToggleButton
+        android:id="@+id/lyingLabelButton"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:text="LYING"
+        android:textOff="LYING OFF"
+        android:textOn="LYING ON"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal6" />
+
+    <ToggleButton
+        android:id="@+id/standingLabelButton"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:text="STANDING"
+        android:textOff="STANDING OFF"
+        android:textOn="STANDING ON"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal2" />
+
+    <ToggleButton
+        android:id="@+id/sitDownLabelButton"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:text="ToggleButton"
+        android:textOff="SIT DOWN"
+        android:textOn="SIT DOWN"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal3" />
+
+    <ToggleButton
+        android:id="@+id/lieDownLabelButton"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:text="ToggleButton"
+        android:textOff="LIE DOWN"
+        android:textOn="LIE DOWN"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal5" />
+
+    <ToggleButton
+        android:id="@+id/standUpLabelButton"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:text="ToggleButton"
+        android:textOff="STAND UP"
+        android:textOn="STAND UP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal3" />
+
+    <ToggleButton
+        android:id="@+id/lyingToSittingLabelButton"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:text="ToggleButton"
+        android:textOff="LIE TO SIT"
+        android:textOn="LIE TO SIT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal5" />
+
+    <ToggleButton
+        android:id="@+id/sittingLabelButton"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:text="SITTING"
+        android:textOff="SITTING OFF"
+        android:textOn="SITTING ON"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
